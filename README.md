@@ -6,25 +6,32 @@ Este projeto foi desenvolvido como parte de um desafio da **DIO** para colocar e
 
 O objetivo é criar uma calculadora que recebe a quantidade de vitórias e derrotas de um herói, calcula o saldo de partidas e determina o seu nível de ranking com base em uma tabela de pontuação.
 
-## 🛠️ Tecnologias Utilizadas
+## 📂 Estrutura Modular do Projeto
 
-- **JavaScript** (Lógica de programação)
-- **Node.js** (Ambiente de execução)
-- **Git/GitHub** (Versionamento de código)
+Para este desafio, decidi aplicar o conceito de **Clean Code** e **Modularização**, separando as responsabilidades em três arquivos distintos:
+
+- **`src/herois.js`**: Armazena os dados brutos (nome, vitórias, derrotas) e contém a função que calcula o saldo líquido das partidas.
+- **`src/classificador.js`**: Contém a lógica de decisão. Utiliza uma função genérica `calcularNivel(valorParaAnalise)` que recebe qualquer valor numérico e retorna o ranking correspondente, tornando o código reutilizável.
+- **`src/index.js`**: O ponto de entrada da aplicação. Ele orquestra a comunicação entre os módulos, enviando o saldo calculado para o classificador e exibindo o resultado final.
+
+graph LR
+A[herois.js<br/>Dados e Saldo] --> B[index.js<br/>Orquestrador]
+C[classificador.js<br/>Lógica de Nível] --> B
+B --> D[Console<br/>Resultado Final]
 
 ## 🚀 Conceitos Aplicados
 
-- **Variáveis**: Armazenamento de dados do herói.
+- **Variáveis**: Armazenamento dinâmico de dados.
 - **Operadores**: Cálculos matemáticos para obter o saldo.
-- **Funções**: Encapsulamento da lógica de cálculo e classificação.
-- **Estruturas de Decisão**: Uso de `if/else` para definir o ranking.
-- **Modularização**: Separação do código em diferentes arquivos utilizando `module.exports` e `require`.
+- **Funções com Parâmetros**: Uso de parâmetros para tornar as funções independentes de variáveis externas.
+- **Estruturas de Decisão**: Uso de `if/else` encadeados para a lógica de ranking.
+- **CommonJS (module.exports/require)**: Organização profissional de arquivos em ambiente Node.js.
 
 ## 📊 Tabela de Níveis
 
-| Vitórias             | Nível    |
+| Saldo/Vitórias       | Nível    |
 | :------------------- | :------- |
-| Menor que 10         | Ferro    |
+| Menor ou igual a 10  | Ferro    |
 | 11 - 20              | Bronze   |
 | 21 - 50              | Prata    |
 | 51 - 80              | Ouro     |
@@ -32,8 +39,14 @@ O objetivo é criar uma calculadora que recebe a quantidade de vitórias e derro
 | 91 - 100             | Lendário |
 | Maior ou igual a 101 | Imortal  |
 
+## 🛠️ Tecnologias Utilizadas
+
+- **JavaScript** (Lógica de programação)
+- **Node.js** (Ambiente de execução)
+- **Git/GitHub** (Versionamento de código)
+
 ## 💻 Como executar
 
 1. Clone este repositório: `git clone https://github.com/Rodolpholn/-Calculadora-de-Partidas-Rankeadas`
-2. Entre na pasta do projeto: `cd calculadora-de-partidas`
-3. Execute o projeto com o Node: `node src/index.js`
+2. Entre na pasta do projeto: `cd -Calculadora-de-Partidas-Rankeadas`
+3. Execute o projeto com o Node
