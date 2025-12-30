@@ -46,4 +46,5 @@ Para este desafio, decidi aplicar o conceito de **Clean Code** e **Modularizaç�
 
 1. Clone este repositório: `git clone https://github.com/Rodolpholn/-Calculadora-de-Partidas-Rankeadas`
 2. Entre na pasta do projeto: `cd -Calculadora-de-Partidas-Rankeadas`
-3. Execute o projeto com o Node
+3. Entre na pasta src: `cd src`
+4. Execute o projeto com o Node: node index.js
