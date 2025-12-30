@@ -14,10 +14,7 @@ Para este desafio, decidi aplicar o conceito de **Clean Code** e **Modularizaç�
 - **`src/classificador.js`**: Contém a lógica de decisão. Utiliza uma função genérica `calcularNivel(valorParaAnalise)` que recebe qualquer valor numérico e retorna o ranking correspondente, tornando o código reutilizável.
 - **`src/index.js`**: O ponto de entrada da aplicação. Ele orquestra a comunicação entre os módulos, enviando o saldo calculado para o classificador e exibindo o resultado final.
 
-graph LR
-A[herois.js<br/>Dados e Saldo] --> B[index.js<br/>Orquestrador]
-C[classificador.js<br/>Lógica de Nível] --> B
-B --> D[Console<br/>Resultado Final]
+`herois.js (Saldo)` ➔ `index.js` ➔ `classificador.js (Nível)` ➔ `Saída Console`
 
 ## 🚀 Conceitos Aplicados
 
