@@ -1,0 +1,8 @@
+# Dependências do Node
+node_modules/
+npm-debug.log*
+
+# Arquivos de sistema e editores
+.DS_Store
+.vscode/
+Thumbs.db

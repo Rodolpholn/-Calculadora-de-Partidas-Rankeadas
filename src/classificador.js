@@ -1,24 +1,23 @@
-function calcularNivel(vitorias, derrotas) {
-  let saldoVitorias = vitorias - derrotas;
+function calcularNivel(valorParaAnalise) {
   let nivel = "";
 
-  if (vitorias < 10) {
+  if (valorParaAnalise <= 10) {
     nivel = "Ferro";
-  } else if (vitorias >= 11 && vitorias <= 20) {
+  } else if (valorParaAnalise >= 11 && valorParaAnalise <= 20) {
     nivel = "Bronze";
-  } else if (vitorias >= 21 && vitorias <= 50) {
+  } else if (valorParaAnalise >= 21 && valorParaAnalise <= 50) {
     nivel = "Prata";
-  } else if (vitorias >= 51 && vitorias <= 80) {
+  } else if (valorParaAnalise >= 51 && valorParaAnalise <= 80) {
     nivel = "Ouro";
-  } else if (vitorias >= 81 && vitorias <= 90) {
+  } else if (valorParaAnalise >= 81 && valorParaAnalise <= 90) {
     nivel = "Diamante";
-  } else if (vitorias >= 91 && vitorias <= 100) {
+  } else if (valorParaAnalise >= 91 && valorParaAnalise <= 100) {
     nivel = "Lendário";
   } else {
     nivel = "Imortal";
   }
 
-  return { saldoVitorias, nivel };
+  return nivel;
 }
 
 module.exports = calcularNivel;

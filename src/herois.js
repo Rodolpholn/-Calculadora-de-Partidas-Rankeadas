@@ -1,5 +1,5 @@
 let nome = "Arthur";
-let vitorias = 155;
+let vitorias = 15;
 let derrotas = 5;
 
 function totalDeVitorias() {

@@ -1,10 +1,15 @@
+// Importamos o objeto do arquivo herois
 const heroi = require("./herois");
-const classificarNivel = require("./classificador");
+// Importamos a função lógica do classificador
+const calcularNivel = require("./classificador");
 
+// 1. Pegamos o saldo usando a função que veio do herois.js
 const saldoVitorias = heroi.totalDeVitorias();
 
-const nivelHeroi = classificarNivel(saldoVitorias);
+// 2. Chamamos o classificador passando esse saldo
+const nivel = calcularNivel(saldoVitorias); // O desafio pede para basear o nível nas Vitórias
 
+// 3. Saída final conforme o requisito da DIO
 console.log(
-  `O Herói de nome ${heroi.nome} tem saldo de ${saldoVitorias} e está no nível de ${nivelHeroi}`
+  `O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}`
 );
